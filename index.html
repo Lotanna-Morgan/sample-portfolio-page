@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT ME</a>
+        </div>
+
+        <div class="content">
+            <div class="home">
+                <h1>I am Lotanna Agu</h1>
+                <h3>Software Developer</h3>
+            </div>
+
+            <div class="about">
+                <p>
+                        I’m a recent graduate of the University of Lagos under the Department of Electrical and Electronics
+                        Engineering where I’m a member of a number of academic societies, and to an advantage I’ve
+                        been an ambassador to a few of the programs which have held in the university, the HSE
+                        (Health Science and Environment) Program for example. My experiences have involved
+                        creating awareness of such programs to a great percentage of my colleagues at school, which
+                        have helped in boosting my verbal communication and interpersonal skills. I’ve also
+                        participated in extracurricular practical-oriented engineering programs, like the Business
+                        Electronics Leadership Technology (BELT) Series Program, which have given me a measure of
+                        experience and exposure to practical engineering methods.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <div class="image">
+                    <img src="images/AreaFatPic.jpg" />
+                </div>
+                <div class="image">
+                    <img src="images/camera720_1437332511402.jpg" />
+                </div>
+                <div class="image">
+                    <img src="images/20150711_182057-1.jpg" />
+                </div>
+                <div class="image">
+                    <img src="images/IMG-20181015-WA0024.jpg" />
+                </div>
+                <div class="image">
+                    <img src="images/Screenshot_20181015-133758.png" />
+                </div>
+                <div class="image">
+                    <img src="images/Screenshot_20181015-134214.png" />
+                </div>
+                <div class="image">
+                    <img src="images/IMG-20181015-WA0018.jpg" />
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="contactform">
+                    <form action="index.html" method="post">
+                        <input type="text" name="" class="inputtext" value="First Name">
+                        <input type="text" name="" class="inputtext" value="Last Name"> 
+                        <input type="text" name="" class="inputtext" value="Your Email">
+                        <textarea cols="4" rows="6" class="inputmessage">Your message...</textarea>
+                        <input type="button" name="" class="submitbutton" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function() {
+                
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $about = $('.about'),
+            $gallery = $('.gallery'),
+            $contact = $('.contact');
+
+            $a.click(function() {
+                $home.fadeIn();
+                $about.fadeOut();
+                $gallery.fadeOut();
+                $contact.fadeOut();
+            });
+
+            $b.click(function() {
+                $about.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $contact.fadeOut();
+            });
+
+            $c.click(function() {
+                $gallery.fadeIn();
+                $home.fadeOut();
+                $about.fadeOut();
+                $contact.fadeOut();
+            });
+
+            $d.click(function() {
+                $contact.fadeIn();
+                $home.fadeOut();
+                $about.fadeOut();
+                $gallery.fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>
